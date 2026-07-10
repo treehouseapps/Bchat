@@ -2,6 +2,7 @@ require("dotenv").config();
 
 const TelegramBot = require("node-telegram-bot-api").default;
 const { GoogleGenAI } = require("@google/genai");
+const axios = require("axios");
 
 // Create the Telegram bot and keep polling enabled.
 const bot = new TelegramBot(process.env.BOT_TOKEN, {
@@ -9,12 +10,6 @@ const bot = new TelegramBot(process.env.BOT_TOKEN, {
 });
 
 console.log("Bot is running...");
-
-const ai = new GoogleGenAI({
-  apiKey: process.env.GEMINI_API_KEY,
-});
-
-const axios = require("axios");
 
 async function askAI(prompt) {
   const response = await axios.post(
