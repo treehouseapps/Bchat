@@ -19,11 +19,13 @@ A simple Telegram bot built with Node.js that replies to text messages from user
 ## Installation
 
 1. Open the project folder:
+
    ```bash
    cd telegram-bot-chat
    ```
 
 2. Install dependencies:
+
    ```bash
    npm install
    ```
